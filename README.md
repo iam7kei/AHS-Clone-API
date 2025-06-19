@@ -1,3 +1,5 @@
+##Installation
+
 ### Run docker compose
 `docker compose up`
 
@@ -13,3 +15,9 @@ Update `schema.prisma` if needed: `npx prisma db pull`
 
 ### Run server
 `npm run dev`
+
+#### Sample Login
+username: `lholly@ahs.com`
+password: `ahsp@ssw0rd2025`
+
+_DISCLAIMER: All exposed data are local use only._
