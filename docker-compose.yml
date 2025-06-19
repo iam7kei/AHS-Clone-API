@@ -4,13 +4,14 @@ services:
     image: postgres:15
     restart: always
     environment:
-      POSTGRES_USER: ahs 
-      POSTGRES_PASSWORD: ahs 
-      POSTGRES_DB: ahs 
+      POSTGRES_USER: ahs
+      POSTGRES_PASSWORD: ahs
+      POSTGRES_DB: ahs
     ports:
       - "5432:5432"
     volumes:
       - db_data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
 
 volumes:
   db_data:
