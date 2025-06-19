@@ -23,7 +23,7 @@ authRoutes.post('/login', async (req: Request, res: Response) => {
 
     const passwordMatch = await argon2.verify(user.password, password);
     if (!passwordMatch) {
-      res.status(401).json({ message: "Invalid credentials." });
+      res.status(401).json({ message: "Invalid credentials." }); 
     }
 
     const {password: currentPassword, ...rest} = user
