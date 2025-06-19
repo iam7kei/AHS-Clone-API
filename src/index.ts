@@ -1,9 +1,10 @@
 import express from 'express'
-const app = express()
 import authRoutes from "./routes/auth"
-
+import cors from "cors"
+const app = express()
 const port = 3001
 app.use(express.json())
+app.use(cors())
 app.get('/', (req: any, res: any) => {
   res.send('Hello World!')
 })

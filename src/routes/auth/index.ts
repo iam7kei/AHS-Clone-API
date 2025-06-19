@@ -10,14 +10,12 @@ export default authRoutes
 authRoutes.post('/login', async (req: Request, res: Response) => {
 
   try {
-    console.log(req.body)
     const { email, password } = req.body;
-    console.log("Login attempt with email:", email, password);
-    if(!email || !password) {
+    if (!email || !password) {
       res.status(400).json({ message: "Email and password are required." });
     }
     const user: User | null = await getUserByEmail(email);
-  
+
     if (!user || user === null) {
       res.status(401).json({ message: "Invalid credentials." });
       return
@@ -28,11 +26,11 @@ authRoutes.post('/login', async (req: Request, res: Response) => {
       res.status(401).json({ message: "Invalid credentials." });
     }
 
-    // Proceed with generating token/session here
-    res.status(200).json({ message: "Login successful!", user: { id: user.id, email: user.email } });
+    const {password: currentPassword, ...rest} = user
+    res.status(200).json({ message: "Login successful!", user: rest});
   } catch (error) {
     console.error("Error during login:", error);
     res.status(500).json({ message: "Internal server error." });
   }
-  
+
 });
