@@ -1,0 +1,32 @@
+{
+  "name": "ahs-clone-rest-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx ts-node ./src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iam7kei/AHS-Clone-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iam7kei/AHS-Clone-API/issues"
+  },
+  "homepage": "https://github.com/iam7kei/AHS-Clone-API#readme",
+  "description": "",
+  "dependencies": {
+    "@prisma/client": "^6.10.1",
+    "argon2": "^0.43.0",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.3",
+    "prisma": "^6.10.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
