@@ -18,6 +18,7 @@ Update `schema.prisma` if needed: `npx prisma db pull`
 
 #### Sample Login
 username: `lholly@ahs.com`
+
 password: `ahsp@ssw0rd2025`
 
 _DISCLAIMER: All exposed data are local use only._
